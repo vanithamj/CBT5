@@ -25,6 +25,7 @@ public class DemoA {
 	  driver.get("https://www.Google.co.in");
 	  WebElement e = driver.findElement(By.name("q"));
 	  e.sendKeys("Jaigurudev");
+	  System.out.println("try");
 	  e.submit();
 	  
 	  
