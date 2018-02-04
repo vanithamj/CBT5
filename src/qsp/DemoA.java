@@ -1,12 +1,14 @@
 package qsp;
 
 import java.net.MalformedURLException;
-import java.net.URL;
+//import java.net.URL;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+//import org.openqa.selenium.remote.DesiredCapabilities;
+//import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
 public class DemoA {
@@ -21,7 +23,11 @@ public class DemoA {
 	  System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 	  WebDriver driver = new ChromeDriver();
 	  driver.get("https://www.Google.co.in");
-	  driver.quit();
+	  WebElement e = driver.findElement(By.name("q"));
+	  e.sendKeys("Jaigurudev");
+	  e.submit();
+	  
+	  
 	  
 	  
   }
